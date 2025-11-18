@@ -79,6 +79,7 @@ div ul {
 }
 
 .given{
+    font-weight: bold;
     pointer-events:none;
     color:#222
 }
