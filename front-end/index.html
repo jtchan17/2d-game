@@ -3,9 +3,63 @@
    <head>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>2D GAME</title>
+       <title>SUDOKU GAME</title>
+        <link rel="stylesheet" href="./style.css">
    </head>
    <body>
-       <canvas id="myCanvas" width="800" height="600"></canvas>
+        <h1 id="title">Solve Sudoku</h1>
+        <div>
+            <label>Difficulty: 
+                <select id="difficulty">
+                    <option value="40">Easy</option>
+                    <option value="50">Medium</option>
+                    <option value="56">Hard</option>
+                </select>
+            </label>
+            <button id="new-game-button">New Game</button>
+        </div>
+        <div id="puzzleBoard">
+            <canvas id="puzzleCanvas" width="540" height="540"></canvas>
+            <div id="inputs" class="inputs-grid"></div>
+        </div>
+        <br>
+        <div class="numbers">
+            <button class="number-button" data-number="1">1</button>
+            <button class="number-button" data-number="2">2</button>
+            <button class="number-button" data-number="3">3</button>
+            <button class="number-button" data-number="4">4</button>
+            <button class="number-button" data-number="5">5</button>
+            <button class="number-button" data-number="6">6</button>
+            <button class="number-button" data-number="7">7</button>
+            <button class="number-button" data-number="8">8</button>
+            <button class="number-button" data-number="9">9</button>
+           
+        </div>
+        <br>
+        <div>
+            <div class="timer">Time: <span id="timer">00:00</span></div>
+            <br>
+            <div id="functionButtons">
+                <button id="clear-button">Clear</button>
+                <button id="hint-button">Hint</button>
+                <button id="check-button">Check</button>
+            </div>
+        </div>
+        
+
+        <div>
+            <h4 id="instruction">Rules To Play</h4>
+            <ul>
+                <li>Fill the 9x9 grid with numbers 1 to 9. Each row, column, and 3x3 box should have every number without repetition.</li>
+                <li>Each row must have numbers 1 to 9.</li>
+                <li>Each column must have numbers 1 to 9.</li>
+                <li>Each 3x3 box must have numbers 1 to 9.</li>
+            </ul>
+        </div>
+       <script src="../back-end/index.js"></script>
+       <br>
+       <footer>
+        <p>Developed by Jia Tong</p>
+       </footer>
    </body>
 </html>
