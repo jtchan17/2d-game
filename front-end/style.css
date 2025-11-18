@@ -1,0 +1,149 @@
+:root{
+    --size:540px;
+    --cell-size:60px;
+    --base:#ffffff;
+    --accent:#1e90ff;
+    --clue:#000;
+    --cell-bg:#f9f9f9
+}
+
+*{
+    box-sizing:border-box;
+    font-family:Segoe UI,Roboto,Arial
+}
+
+body{
+    background:#f2f4f8;
+    margin:20px;
+    color:#123
+}
+.container{
+    max-width:720px;
+    margin:0 auto
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px
+}
+
+div{
+    text-align:center;
+}
+
+div ul {
+    list-style-type: none;
+}
+
+#puzzleBoard{
+    position:relative;
+    width:var(--size);
+    height:var(--size);
+    margin:0 auto;
+    background:var(--base);
+    border-radius:6px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08)
+}
+
+#puzzleCanvas{
+    display:block
+}
+
+.inputs-grid{
+    position:absolute;
+    left:0;top:0;
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns:repeat(9,1fr);
+    grid-template-rows:repeat(9,1fr)
+}
+
+.inputs-grid input{
+    width:100%;
+    height:100%;
+    text-align:center;
+    border:0;
+    font-size:1.2rem;
+    background:transparent
+}
+
+.inputs-grid input:focus{
+    outline:2px solid var(--accent);
+    background:rgba(30,144,255,0.04)
+}
+
+.clue{
+    font-weight:700;
+    color:var(--clue)
+}
+
+.given{
+    pointer-events:none;
+    color:#222
+}
+
+.invalid{
+    background:rgba(255,0,0,0.25);
+    border:2px solid #d32f2f;
+    color:#d32f2f
+}
+
+.timer{
+    font-weight:600
+}
+
+button{
+    margin-right:4px;
+    padding:3px 5px;
+    border-radius:4px;
+    border:1px solid #ccc;
+    background:#fff;
+    cursor:pointer
+}
+
+.functionButtons select{
+    margin-left:6px
+}
+
+.number-pad{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;margin-top:12px
+}
+
+.number-button{
+    padding:12px;
+    font-size:1.1rem;
+    font-weight:600;
+    background:#1e90ff;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer
+}
+
+.number-button:hover{
+    background:#0d78e8
+}
+
+#functionButtons button{
+    grid-column:1/-1;
+    padding:12px;
+    font-size:1rem;
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer
+}
+
+#functionButtons button:hover{
+    background:#c82333
+}
+
+p{
+    text-align:center;
+    color:#555;
+    margin-top:10px
+}
