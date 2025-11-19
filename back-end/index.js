@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const difficulty = document.getElementById('difficulty');
     const showTimer = document.getElementById('timer');
 
+    // const sudoku = require('./logic');
+
     const numOfGrid = 9;
     const size = canvas.width; // assume square
     const cell = size / numOfGrid;
