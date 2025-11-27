@@ -7,6 +7,6 @@ namespace SudokuDataManager
 {
     public interface IPrint
     {
-        
+        void PrintInfo();
     }
 }
