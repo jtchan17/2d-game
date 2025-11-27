@@ -5,19 +5,18 @@ using System.Threading.Tasks;
 
 namespace SudokuDataManager
 {
-    public class Player
-    {
-        // private int PlayerId;
-        // private string Username;
-        // private int Score;
-        // private int TotalGammes;
-        // private TimeSpan BestTime;
-
-        
-        public int PlayerId { get; set; }
-        public string Username { get; set; }
+    public class Player : User
+    {        
         public int Score { get; set; }
         public int TotalGames { get; set; }
-        public TimeSpan BestTime { get; set; }
+        public TimeSpan BestTime { get; set; } = TimeSpan.MaxValue;
+
+        public override void PrintInfo()
+        {
+            Console.WriteLine(
+                $"{Id}. {Username} - Score: {Score}, Games: {TotalGames}, " +
+                $"Best Time: {(BestTime == TimeSpan.MaxValue ? "N/A" : BestTime.ToString())}"
+            );
+        }
     }
 }

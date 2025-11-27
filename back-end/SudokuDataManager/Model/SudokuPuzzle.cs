@@ -5,12 +5,18 @@ using System.Threading.Tasks;
 
 namespace SudokuDataManager
 {
-    public class SudokuPuzzle
+    public class SudokuPuzzle : IPuzzle
     {
         public int PuzzleId { get; set; }
         public string Difficulty { get; set; }   // Easy, Medium, Hard
-        public string PuzzleGrid { get; set; }   // you can store it as string
         public bool IsCompleted { get; set; }
         public TimeSpan CompletionTime { get; set; }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine(
+                $"{PuzzleId}. {Difficulty} | Completed: {IsCompleted} | Time: {CompletionTime}"
+            );
+        }
     }
 }
