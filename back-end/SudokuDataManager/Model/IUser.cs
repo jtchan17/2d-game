@@ -1,0 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace SudokuDataManager
+{
+    public interface IUser :IPrint
+    {
+        int Id { get; set; }
+        string Username { get; set; }
+    
+    }
+}
