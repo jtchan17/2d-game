@@ -10,6 +10,7 @@ namespace SudokuDataManager.Functions
     {
         public static List<IUser> Players = new List<IUser>();
 
+        //Create player based on user input (username)
         public static void AddPlayer()
         {
             string username = UserInput.ReadString("Enter username: ");
@@ -23,6 +24,7 @@ namespace SudokuDataManager.Functions
             Console.WriteLine("Player added.\n");
         }
 
+        //View all the created players
         public static void ViewPlayers()
         {
             Console.WriteLine("=== Player List ===");
@@ -31,6 +33,7 @@ namespace SudokuDataManager.Functions
             Console.WriteLine();
         }
 
+        //Update player information based on ID
         public static void UpdatePlayer()
         {
             ViewPlayers();
@@ -48,6 +51,7 @@ namespace SudokuDataManager.Functions
             Console.WriteLine("Player updated.\n");
         }
 
+        //Delete player by ID
         public static void DeletePlayer()
         {
             ViewPlayers();

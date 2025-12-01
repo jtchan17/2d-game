@@ -7,6 +7,7 @@ namespace SudokuDataManager.Functions
 {
     public static class UserInput
     {
+        //Read interger from console with prompt
         public static int ReadInt(string prompt)
         {
             int value;
@@ -30,6 +31,7 @@ namespace SudokuDataManager.Functions
             }
         }
 
+        //Read string from console with prompt
         public static string ReadString(string prompt)
         {
             string value = "";

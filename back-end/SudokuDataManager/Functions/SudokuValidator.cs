@@ -7,6 +7,7 @@ namespace SudokuDataManager.Functions
 {
     public static class SudokuValidator
     {
+        //Check if number exists in the specified row
         public static bool IsNumberInRow(int[,] board, int row, int number)
         {
             for (int col = 0; col < 9; col++)
@@ -16,6 +17,7 @@ namespace SudokuDataManager.Functions
             return false;
         }
 
+        //Check if number exists in the specified column
         public static bool IsNumberInColumn(int[,] board, int col, int number)
         {
             for (int row = 0; row < 9; row++)
@@ -25,6 +27,7 @@ namespace SudokuDataManager.Functions
             return false;
         }
 
+        //Check if number exists in the 3x3 box
         public static bool IsNumberInBox(int[,] board, int row, int col, int number)
         {
             int startRow = row - row % 3;
@@ -38,6 +41,7 @@ namespace SudokuDataManager.Functions
             return false;
         }
 
+        //Validate if placing the number is valid
         public static bool IsValidMove(int[,] board, int row, int col, int number)
         {
             return !IsNumberInRow(board, row, number) &&
@@ -45,6 +49,7 @@ namespace SudokuDataManager.Functions
                    !IsNumberInBox(board, row, col, number);
         }
 
+        //Get the type of conflict for the invalid move
         public static string GetConflictType(int[,] board, int row, int col, int number)
         {
             if (IsNumberInRow(board, row, number))

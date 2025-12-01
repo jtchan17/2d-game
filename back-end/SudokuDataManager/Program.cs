@@ -38,6 +38,7 @@ namespace SudokuDataManager{
             }
         }
 
+        // Menu for Player related operations
         static void PlayerMenu()
         {
             Console.WriteLine("\n=== Player Menu ===");
@@ -56,6 +57,7 @@ namespace SudokuDataManager{
             }
         }
 
+        //Menu for Puzzle related operations
         static void PuzzleMenu()
         {
             Console.WriteLine("\n=== Puzzle Menu ===");

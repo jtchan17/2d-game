@@ -11,6 +11,7 @@ namespace SudokuDataManager.Functions
         public static List<IPuzzle> Puzzles = new List<IPuzzle>();
         static Random rand = new Random();
 
+        //Create puzzle based on user input
         public static void AddPuzzle()
         {
             string diff = UserInput.ReadString("Difficulty (Easy/Medium/Hard): ");
@@ -26,6 +27,7 @@ namespace SudokuDataManager.Functions
             Console.WriteLine("Puzzle added.\n");
         }
 
+        //Generate random puzzle based on different difficulty levels
         public static void GenerateRandomPuzzle()
         {
             string[] difficulties = { "Easy", "Medium", "Hard" };
@@ -43,6 +45,7 @@ namespace SudokuDataManager.Functions
             Console.WriteLine("Random puzzle generated.\n");
         }
 
+        //View all the created puzzles
         public static void ViewPuzzles()
         {
             Console.WriteLine("=== Puzzle List ===");
@@ -51,11 +54,13 @@ namespace SudokuDataManager.Functions
             Console.WriteLine();
         }
 
+        //Get specific puzzle by ID
         public static SudokuPuzzle GetSudokuPuzzle(int id)
         {
             return Puzzles.Where(p => p is SudokuPuzzle).Cast<SudokuPuzzle>().FirstOrDefault(p => p.PuzzleId == id);
         }
 
+        //Delete puzzle by ID
         public static void DeletePuzzle()
         {
             ViewPuzzles();
