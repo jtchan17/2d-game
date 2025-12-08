@@ -182,7 +182,7 @@ The dashboard shows:
 For non-logged-in users, the dashboard shows aggregated statistics from all players.
 
 ## Security Features
-- Password hashing using BCrypt
+- Password hashing
 - JWT-based authentication
 - Token expiration and refresh mechanism
 - Authorization required for personal game data
